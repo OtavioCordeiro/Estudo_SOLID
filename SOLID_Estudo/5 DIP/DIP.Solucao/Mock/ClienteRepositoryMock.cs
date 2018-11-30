@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLID_Estudo._5_DIP.DIP.Solucao
+namespace SOLID_Estudo._5_DIP.DIP.Solucao.Mock
 {
-    public class CPFServices : ICPFServices
+    public class ClienteRepositoryMock : IClienteRepository
     {
-        public bool IsValid(string cpf)
+        public void AdicionarCliente(Cliente cliente)
         {
-            return cpf.Length == 11;
+            // Adiciona ao banco
         }
     }
 }

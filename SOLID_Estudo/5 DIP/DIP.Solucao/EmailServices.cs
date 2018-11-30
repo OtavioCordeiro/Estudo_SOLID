@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOLID_Estudo._5_DIP.DIP.Solucao.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
@@ -7,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace SOLID_Estudo._5_DIP.DIP.Solucao
 {
-    public class EmailServices
+    public class EmailServices : IEmailServices
     {
-        internal static bool IsValid(string email)
+        public bool IsValid(string email)
         {
             return email.Contains("@");
         }
 
-        internal static void Enviar(string fromEmail, string toEmail, string subject, string body)
+        public void Enviar(string fromEmail, string toEmail, string subject, string body)
         {
             var mail = new MailMessage(fromEmail, toEmail);
             var client = new SmtpClient
