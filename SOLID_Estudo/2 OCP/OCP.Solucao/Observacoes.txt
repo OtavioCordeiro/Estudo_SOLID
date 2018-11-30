@@ -1,0 +1,3 @@
+﻿A classe DebitoConta está fechada para modificação, e aberta para ser extendida
+
+por que uma classe abstrada e não uma interface ? porque eu quero obrigar a sobreEscrever o método e uso uma propriedade da classe abstrada.
